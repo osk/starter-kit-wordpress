@@ -1,0 +1,58 @@
+{
+  "name": "starter-kit-wordpress",
+  "scripts": {
+    "postdeploy": "scripts/install.sh"
+  },
+  "env": {
+    "DATABASE_URL": {
+      "description": "Database connection url",
+      "required": true
+    },
+    "HEROKU_APP_NAME": {
+      "description": "Heroku app name, supplied by Heroku",
+      "required": false
+    },
+    "AUTH_KEY": {
+      "description": "WP config",
+      "generator": "secret"
+    },
+    "SECURE_AUTH_KEY": {
+      "description": "WP config",
+      "generator": "secret"
+    },
+    "LOGGED_IN_KEY": {
+      "description": "WP config",
+      "generator": "secret"
+    },
+    "NONCE_KEY": {
+      "description": "WP config",
+      "generator": "secret"
+    },
+    "AUTH_SALT": {
+      "description": "WP config",
+      "generator": "secret"
+    },
+    "SECURE_AUTH_SALT": {
+      "description": "WP config",
+      "generator": "secret"
+    },
+    "LOGGED_IN_SALT": {
+      "description": "WP config",
+      "generator": "secret"
+    },
+    "NONCE_SALT": {
+      "description": "WP config",
+      "generator": "secret"
+    }
+  },
+  "addons": [
+    {
+      "plan": "jawsdb-maria:kitefin"
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-php"
+    }
+  ]
+}

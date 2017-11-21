@@ -1,0 +1,9 @@
+apache_modules:
+  - mod_rewrite
+
+# we need to reference the exact WP dir here for things to work
+# the actual docroot should be "web/", e.g. running "wp server --docroot=web"
+# "dev:wp" task in package.json does that
+path: web/wp
+
+host: 0.0.0.0

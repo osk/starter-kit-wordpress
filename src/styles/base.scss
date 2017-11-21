@@ -1,0 +1,94 @@
+/***
+*  This file is imported in components/app-layout/AppLayout.scss
+*/
+
+/* stylelint-disable selector-max-type  */
+@-ms-viewport {
+  width: device-width;
+}
+
+@-o-viewport {
+  width: device-width;
+}
+
+@viewport {
+  width: device-width;
+}
+
+:root {
+  --scale-multiplier: $scale;
+
+  // 805px is start of 15" Mac Book Pro range
+  @media (max-height: 805px) and (min-aspect-ratio: 16/10) {
+    --scale-multiplier: $scale-md;
+  }
+
+  // 650px is start of 13" Mac Book Pro with dock at bottom range
+  @media (max-height: 650px) and (min-aspect-ratio: 16/10) {
+    --scale-multiplier: $scale-sm;
+  }
+}
+
+html,
+body {
+  min-height: 100vh;
+
+  background: $color-background;
+}
+
+html {
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+  // always show the vertical scrollbar so that content doesn't jump
+  overflow-y: scroll;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  box-sizing: border-box;
+}
+
+// inherited from <html>
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+
+  margin: 0;
+
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color-font;
+
+  // iOS on orientation change
+  text-size-adjust: 100%;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+// placeholders
+input,
+textarea,
+select {
+  &::-webkit-input-placeholder {
+    color: $color-placeholder;
+  }
+
+  &::-moz-placeholder {
+    opacity: 1;
+    color: $color-placeholder;
+  }
+
+  &:-ms-input-placeholder {
+    color: $color-placeholder;
+  }
+}

@@ -1,0 +1,54 @@
+# Environment Configuration
+.env
+
+# Build output folders
+build/
+
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Coverage directory used by tools like istanbul
+coverage
+
+# node-waf configuration
+.lock-wscript
+
+# Dependency directory
+# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
+node_modules
+
+# Debug log from npm
+npm-debug.log
+
+# IntelliJ IDE ignore
+.idea
+
+# Visual Studio Code
+.vscode
+.history
+
+# flow-typed Lib Defs
+flow-typed/
+
+# Flow Coverage Report
+flow-coverage/
+
+# Happypack
+.happypack
+
+# OSX Files
+.DS_Store
+
+# Composer
+vendor/
+
+# WordPress
+web/app/plugins/*
+web/app/upgrade
+web/app/uploads/*

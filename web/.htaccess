@@ -1,0 +1,28 @@
+# Lock down files we don't want to be accessible via web server
+
+## dotfiles
+<FilesMatch "^\.">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+## config files
+<FilesMatch "^(config\.php|wp-config\.php)$">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+# Redirect 404s to WP 404 handler
+ErrorDocument 404 /index.php?error=404
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress

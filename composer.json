@@ -1,0 +1,10 @@
+{
+  "name": "ueno/starter-kit-wordpress",
+  "description": "WordPress starter kit from Ueno.",
+  "type": "project",
+  "require": {
+    "php": "~7.1.0",
+    "vlucas/phpdotenv": "^2.4",
+    "wp-cli/wp-cli": "^1.4"
+  }
+}
