@@ -24,18 +24,24 @@ You need to have PHP7.1+, MySQL (or some supported db) and Composer installed
 > brew install composer
 ```
 
+After installing mysql, it needs to be started with
+
+```bash
+> brew services start mysql
+```
+
 Install dependencies, `preinstall` script will install Composer dependencies.
 
 ```bash
 > npm install
 ```
 
-Create a mysql database, if you've just installed mysql you can use root which has the empty password. Then run the install script which uses `wp-cli` to setup Wordpress, then start.
+Create a mysql database, if you've just installed mysql you can use root which has the empty password. Then run the install script which uses `wp-cli` to setup Wordpress.
 
-We're assuming the db will bes named `demo-wordpress-api` and the server will be running on `127.0.0.1:3306`, if that's not the case, create `.env` and change accordingly.
+We're assuming the db will bes named `starter-kit-wordpress` and the server will be running on `127.0.0.1:3306`, if that's not the case, create `.env` and change accordingly.
 
 ```bash
-> mysql -u root -e "create database \`demo-wordpress-api\`"
+> mysql -u root -e "create database \`starter-kit-wordpress\`"
 > npm run install:wp
 # take note of admin password
 > npm run dev
@@ -51,7 +57,7 @@ mysqlworkbench can be used to manage the sql server via GUI, if that's your thin
 
 In dev no env variables should be needed, but when hosting they need to be set, see `.env_example`
 
-* `DATABASE_URL` – URL to database, `JAWSDB_MARIA_URL` is also checked, defaults to `mysql://root:@127.0.0.1:3306/demo-wordpress-api`
+* `DATABASE_URL` – URL to database, `JAWSDB_MARIA_URL` is also checked, defaults to `mysql://root:@127.0.0.1:3306/starter-kit-wordpress`
 * `WP_URL` – Required for heroku install script
 * `WP_ADMIN_PASSWORD` – Required for heroku install script
 * `WP_ADMIN_EMAIL` – Required for heroku install script
@@ -81,7 +87,7 @@ The install script can be run manually with:
 > heroku run scripts/install.sh
 ```
 
-To re-install the database can be reset by running
+To re-install, the database can be reset by running
 
 ```bash
 > heroku run scripts/uninstall.sh

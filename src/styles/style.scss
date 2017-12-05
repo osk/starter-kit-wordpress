@@ -1,6 +1,8 @@
-$assets: '/wp-content/themes/ueno-wp/assets';
+$assets: '/wp-content/themes/ueno-wordpress/assets';
 
 @import 'config';
 @import 'base';
+
+@import 'grid-overlay';
 
 @import './components/button';

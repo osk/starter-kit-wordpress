@@ -40,8 +40,8 @@ define('DISALLOW_FILE_MODS', true);
 define('AUTOMATIC_UPDATER_DISABLED', true);
 
 if (!IS_DEV) {
-  //define('FORCE_SSL_LOGIN', true);
-  //define('FORCE_SSL_ADMIN', true);
+  define('FORCE_SSL_LOGIN', true);
+  define('FORCE_SSL_ADMIN', true);
 }
 
 define('WP_ALLOW_MULTISITE', false);

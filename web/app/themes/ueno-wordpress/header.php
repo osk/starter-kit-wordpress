@@ -10,3 +10,16 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+<?php
+  include 'components/grid-overlay.php';
+?>
+
+<?php
+wp_nav_menu(array(
+  'theme_location' => 'menu',
+  'container' => 'nav',
+  'container_class' => 'navigation',
+  'menu_class' => 'navigation__list',
+));
+?>

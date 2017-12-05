@@ -5,5 +5,3 @@ apache_modules:
 # the actual docroot should be "web/", e.g. running "wp server --docroot=web"
 # "dev:wp" task in package.json does that
 path: web/wp
-
-host: 0.0.0.0

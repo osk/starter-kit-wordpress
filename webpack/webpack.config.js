@@ -22,6 +22,7 @@ function removeNil(as) {
 
 const wordpressCssBanner = `/*
 Theme Name: ${WP_THEME_NAME}
+Author: Ueno.
 */`;
 
 module.exports = {
@@ -33,7 +34,7 @@ module.exports = {
 
   output: {
     path: outputPath,
-    publicPath: isDev ? 'http://localhost:3000/' : '',
+    publicPath: isDev ? 'http://localhost:3001/' : '',
     filename: 'js/[name].js',
     sourceMapFilename: '[file].map',
   },
@@ -41,7 +42,7 @@ module.exports = {
   devServer: {
     hot: true,
     inline: true,
-    port: 3000,
+    port: 3001,
     host: 'localhost',
     noInfo: false,
     publicPath: '/',

@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * This is setup to work for Heroku, for other hosting, somethings might need to
+ * be changed here, e.g. how the db stuff is handled.
+ */
+
 require_once(dirname(__DIR__).'/web/config.php');
 
 $databaseUrl = getenv('DATABASE_URL') ? getenv('DATABASE_URL') : getenv('JAWSDB_MARIA_URL');
