@@ -87,6 +87,16 @@ function install() {
 
       console.info(optionStdout);
     });
+
+    exec('vendor/bin/wp rewrite structure /%postname%/', (rewriteErr, rewriteStdout, rewriteStderr) => {
+      if (rewriteErr) {
+        error(chalk.red('Unable to set rewrite structure'));
+        console.error(rewriteStderr);
+        exit(1);
+      }
+
+      console.info(rewriteStdout);
+    });
   });
 }
 
