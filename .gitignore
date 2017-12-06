@@ -49,6 +49,5 @@ flow-coverage/
 vendor/
 
 # WordPress
-web/app/plugins/*
 web/app/upgrade
 web/app/uploads/*
