@@ -14,6 +14,7 @@ if [[ ! -z "$WP_URL" && ! -z "$WP_ADMIN_PASSWORD" && ! -z "$WP_ADMIN_EMAIL" ]]; 
 
   vendor/bin/wp theme activate "$wp_theme"
   vendor/bin/wp plugin activate --all
+  vendor/bin/wp option set blogdescription ""
 else
   echo "Unable to install WordPress automatically, WP_URL, WP_ADMIN_PASSWORD and WP_ADMIN_EMAIL must be set"
 fi

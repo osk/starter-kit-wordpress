@@ -77,6 +77,16 @@ function install() {
 
       console.info(pluginStdout);
     });
+
+    exec('vendor/bin/wp option set blogdescription ""', (optionErr, optionStdout, optionStderr) => {
+      if (optionErr) {
+        error(chalk.red('Unable to set option'));
+        console.error(optionStderr);
+        exit(1);
+      }
+
+      console.info(optionStdout);
+    });
   });
 }
 
