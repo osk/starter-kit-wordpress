@@ -15,6 +15,9 @@
 # Redirect 404s to WP 404 handler
 ErrorDocument 404 /index.php?error=404
 
+Redirect 301 /wp-admin /wp/wp-admin
+Redirect 301 /wp-login.php /wp/wp-login.php
+
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
