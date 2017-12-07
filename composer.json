@@ -2,9 +2,23 @@
   "name": "ueno/starter-kit-wordpress",
   "description": "WordPress starter kit from Ueno.",
   "type": "project",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
   "require": {
     "php": "~7.1.0",
     "vlucas/phpdotenv": "^2.4",
-    "wp-cli/wp-cli": "^1.4"
+    "wp-cli/wp-cli": "^1.4",
+    "johnpbloch/wordpress": "4.9.1"
+  },
+  "extra": {
+    "installer-paths": {
+      "web/app/plugins/{$name}/": [
+      ]
+    },
+    "wordpress-install-dir": "web/wp"
   }
 }

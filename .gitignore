@@ -49,5 +49,12 @@ flow-coverage/
 vendor/
 
 # WordPress
+web/wp
 web/app/upgrade
 web/app/uploads/*
+
+# We don't track plugins in general, but...
+web/app/plugins/*
+
+# Some plugins need to be checked in, e.g. ACF Pro
+!web/app/plugins/advanced-custom-fields-pro
