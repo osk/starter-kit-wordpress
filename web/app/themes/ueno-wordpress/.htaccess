@@ -1,0 +1,2 @@
+# Disable directory index on apache
+Options -Indexes

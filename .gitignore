@@ -3,6 +3,7 @@
 
 # Build output folders
 build/
+deploy/
 
 # Logs
 logs
@@ -58,3 +59,5 @@ web/app/plugins/*
 
 # Some plugins need to be checked in, e.g. ACF Pro
 !web/app/plugins/advanced-custom-fields-pro
+
+!web/app/plugins/README.md

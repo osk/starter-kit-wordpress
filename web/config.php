@@ -61,3 +61,5 @@ if (IS_DEV) {
   define('SCRIPT_DEBUG', false);
   define('WP_DEBUG', false);
 }
+
+define('UENO_CONFIG_SET', true);

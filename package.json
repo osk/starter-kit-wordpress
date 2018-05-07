@@ -1,6 +1,6 @@
 {
   "name": "starter-kit-wordpress",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "description": "WordPress starter kit from Ueno.",
   "main": "index.js",
   "engines": {

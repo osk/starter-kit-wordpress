@@ -6,7 +6,7 @@
   "env": {
     "DATABASE_URL": {
       "description": "Database connection url",
-      "required": true
+      "required": false
     },
     "HEROKU_APP_NAME": {
       "description": "Heroku app name, supplied by Heroku",
